@@ -1,0 +1,51 @@
+[package]
+name = "efm32wg-pac"
+description = "Peripheral access API for EFM32WG MCU (generated using svd2rust)"
+homepage = "https://github.com/efm32-rs/efm32wg-pacs"
+version = "0.1.1"
+authors = [ "Vladimir Petrigo <vladimir.petrigo@gmail.com>",]
+license = "BSD-3-Clause"
+keywords = [ "no-std", "arm", "cortex-m", "efm32",]
+categories = [ "embedded", "hardware-support", "no-std",]
+repository = "https://github.com/efm32-rs/efm32wg-pacs"
+readme = "README.md"
+edition = "2021"
+
+[dependencies]
+cortex-m = "~0.7"
+vcell = "~0.1"
+
+[features]
+default = [ "rt",]
+rt = [ "cortex-m-rt/device",]
+efm32wg230 = []
+efm32wg232 = []
+efm32wg280 = []
+efm32wg290 = []
+efm32wg295 = []
+efm32wg330 = []
+efm32wg332 = []
+efm32wg360 = []
+efm32wg380 = []
+efm32wg390 = []
+efm32wg395 = []
+efm32wg840 = []
+efm32wg842 = []
+efm32wg880 = []
+efm32wg890 = []
+efm32wg895 = []
+efm32wg900 = []
+efm32wg940 = []
+efm32wg942 = []
+efm32wg980 = []
+efm32wg990 = []
+efm32wg995 = []
+
+[dependencies.cortex-m-rt]
+version = "~0.7"
+optional = true
+
+[package.metadata.docs.rs]
+features = [ "rt", "efm32wg230", "efm32wg995",]
+default-target = "thumbv7em-none-eabihf"
+targets = []
